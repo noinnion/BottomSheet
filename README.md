@@ -2,7 +2,7 @@ BottomSheet
 =======
 [![Build Status](https://travis-ci.org/soarcn/BottomSheet.svg)](https://travis-ci.org/soarcn/BottomSheet) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-BottomSheet-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1044)
 
-**_Google introduced official bottomsheets implementation in Support library 23.2.0,thus this library is no longer activly being developed. I will continuely fix defects been found and accept good PR but No more new feature will be developed. Thanks for your support!_**
+**_This is a fork from https://github.com/soarcn/BottomSheet with some improvements to show check status of list items._**
 
 One way to present a set of actions to a user is with bottom sheets, a sheet of paper that slides up from the bottom edge of the screen. Bottom sheets offer flexibility in the display of clear and simple actions that do not need explanation.
 
@@ -23,23 +23,21 @@ How to use this library
 - Download this library, import to your IDE (eclipse...) as a library project.
 - Using Gradle
 
+Add it in your root build.gradle at the end of repositories:
 ```groovy
-    compile 'com.cocosw:bottomsheet:1.+@aar'
-```
-- Using Maven
-
-```xml
-<dependency>
-    <groupId>com.cocosw</groupId>
-    <artifactId>bottomsheet</artifactId>
-    <version>1.x</version>
-    <type>apklib</type>
-</dependency>
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
 ```
 
-- Version
-if you use Android support library - 1.4.0
-if you use Androidx - 1.5.0
+Add the dependency
+
+```groovy
+    implementation 'com.github.noinnion:BottomSheet:master-SNAPSHOT@aar'
+```
 
 API
 =======
@@ -115,12 +113,6 @@ Contribute
 =======
 
 - Feel free to fork it
-
-About me
-=======
-
-I'm Kai, an 32 years old android developer based in Sydney.
-
 
 License
 =======
